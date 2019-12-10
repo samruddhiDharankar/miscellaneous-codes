@@ -12,10 +12,10 @@ int processArray(int array[], int len) {
     int sum=0,i=0;
     while(i<len) {
       int j = i;
-      while(j<len && array[j]%2 == 0) {
+      while(j<len && array[j]%2 == 0) {                 //even nos in array 
         j++;
       }
-      if(i != j ) {
+      if(i != j ) {                                     //tracking consecutive even nos 
         sum = sum + j - i; 
         count++;
         i=j;
@@ -24,7 +24,8 @@ int processArray(int array[], int len) {
         i++;
       } 
     }
-  return (sum/count);
+    int average = sum/count;
+  return average;                                   //returning average of total consecutive length and occurrence of even nos
 }
 
 int main() {
